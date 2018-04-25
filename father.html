@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <p>父级</p>
+    <!-- <button>设置cookies</button> -->
+    <button>设置cookies</button>
+    <div id="fuji"></div>
+    <iframe src="http://127.0.0.1:8887/child/zi.html" name="ziji" id="myIframe"></iframe>
+    <script type="text/javascript">
+        window.onload = function(){
+            document.cookie="username=fuji"
+            var cookiesText = document.cookie
+            console.log(document.cookie)
+            document.getElementsByTagName('div')[0].innerHTML = cookiesText
+        }
+        
+    </script>
+</body>
+</html>
